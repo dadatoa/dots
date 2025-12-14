@@ -1,0 +1,42 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+Include ~/.lima/*/ssh.config
+
+AddKeysToAgent yes
+
+Host *
+  ServerAliveInterval 240
+  preferredauthentications publickey
+
+Host 10.120.*
+  RequestTTY force
+  preferredauthentications publickey
+  identityfile ~/.ssh/lab
+
+host xenmgt
+  hostname xen
+  user root
+  requesttty yes
+  remotecommand sesh connect .
+
+host minimgt
+  hostname macmini
+  user root
+  requesttty yes
+  remotecommand sesh connect .
+
+Host *.local
+  preferredauthentications publickey
+  identityfile ~/.ssh/lab
+
+Host gitlab*
+  PreferredAuthentications publickey
+  identityfile ~/.ssh/git
+
+
+Host github*
+  PreferredAuthentications publickey
+  identityfile ~/.ssh/git
+
