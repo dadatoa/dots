@@ -35,7 +35,6 @@ Host gitlab*
   PreferredAuthentications publickey
   identityfile ~/.ssh/git
 
-
 Host github*
   PreferredAuthentications publickey
   identityfile ~/.ssh/git
