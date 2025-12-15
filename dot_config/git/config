@@ -1,0 +1,28 @@
+[init]
+	defaultBranch = "main"
+
+[pull]
+	rebase = true
+
+[user]
+	email = "f0a202@outlook.com"
+	name = "dadatoa"
+[diff]
+	algorithm = histogram
+[core]
+	logallrefupdates = true
+	quotePath = false
+	commitGraph = true
+[gc]
+	reflogexpire = 90
+	writeCommitGraph = true
+[receive]
+	advertisePushOptions = true
+	procReceiveRefs = refs/for
+[fetch]
+	writeCommitGraph = true
+[safe]
+	directory = *
+[uploadpack]
+	allowfilter = true
+	allowAnySHA1InWant = true
