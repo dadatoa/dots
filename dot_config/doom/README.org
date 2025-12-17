@@ -1,0 +1,22 @@
+#+title: Readme
+
+* Cheatsheet
+
+| <SPC> + h + r + r   | reload config                        |
+| <SPC> + q + R       | restart emacs et server              |
+| <SPC> + f + P       | open personnal conf dir              |
+| <SPC> + .           | open /dired/ AKA file explorer         |
+|                     |                                      |
+| *Org Mode*            | -                                    |
+| <CTRL> c + <CTRL> c | reformat tableau, evalue code blocks |
+| <CTRL> c + <CTRL> v | open tangle menu                     |
+|                     |                                      |
+| <CTRL> x + g        | Git                                  |
+
+* Install Doom Emacs
+
+#+NAME: git_clone
+#+begin_src sh :tangle Justfile
+  echo PID: "$$"
+#+end_src
+

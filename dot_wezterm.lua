@@ -68,7 +68,7 @@ workspace_switcher.apply_to_config(config)
 config.front_end = "WebGpu"
 
 config.set_environment_variables = {
-  -- PATH = "/opt/homebrew/bin:/run/current-system/sw/bin:" .. os.getenv("PATH"),
+  PATH = "/opt/homebrew/bin:/run/current-system/sw/bin:" .. os.getenv("PATH"),
   XDG_CONFIG_HOME = os.getenv("HOME") .. "/.config",
 }
 
@@ -83,7 +83,7 @@ config.font_size = 17
 config.window_decorations = "RESIZE"
 
 -- Spawn a nu shell in login mode
--- config.default_prog = { "/opt/homebrew/bin/nu" }
+config.default_prog = { 'nu' }
 
 ------------------
 -- keymaps--
