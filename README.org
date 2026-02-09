@@ -39,19 +39,21 @@ echo "If you don't, you can continue installing your dotfiles"
 echo "with chez moi by following the documentation on"
 echo "the website: https://www.chezmoi.io/quick-start/"
 
-gum confirm "continue with dotfiles?" || exit 1
-
-command -v chezmoi >/dev/null 2>&1
-if [[ $? -ne 0 ]]; then
+dotfiles(){
+  command -v chezmoi >/dev/null 2>&1
+  if [[ $? -ne 0 ]]; then
     echo "Chezmoi is NOT in PATH. You can visit https://www.chezmoi.io/install/ to install it"
     read -n 1 -s -r -p "Press any key to exit..."
-fi
+  fi
 
-GITHUB_USERNAME=$(gum input --placeholder "your github username")
+  GITHUB_USERNAME=$(gum input --placeholder "your github username")
 
-DOTFILES_REPO_NAME=$(gum input --placeholder "your dotfiles repo")
+  DOTFILES_REPO_NAME=$(gum input --placeholder "your dotfiles repo")
 
-chezmoi init --apply --verbose https://github.com/$GITHUB_USERNAME/$DOTFILES_REPO_NAME.git
+  chezmoi init --apply --verbose https://github.com/$GITHUB_USERNAME/$DOTFILES_REPO_NAME.git
+}
+
+gum confirm "continue with dotfiles?" && dotfiles
 #+end_src
 
 * Configure Catppuccin theme for Tmux
@@ -59,7 +61,5 @@ As I only use very few plugins for tmux, I configure it manually.
 
 #+NAME: catppuccin-tmux
 #+begin_src sh :tangle script.sh
-echo "add Catppuccin themes for tmux"
-mkdir -p ~/.tmux/plugins/catppuccin
-git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
+gum confirm "add Catppuccin themes for tmux" && mkdir -p ~/.tmux/plugins/catppuccin && git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
 #+end_src
