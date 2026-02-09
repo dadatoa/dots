@@ -22,7 +22,7 @@ fi
 * Configure emacs
 You need to meet the [[https://github.com/doomemacs/doomemacs?tab=readme-ov-file#prerequisites][prequisites]] of installing doom emacs first. Otherwise exit the script and install the necessary packages.
 
-#+NAME: doom
+#+Name: doom
 #+begin_src sh :tangle script.sh
 gum confirm "configure doom ?" && git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs && ~/.config/emacs/bin/doom install
 #+end_src
@@ -32,7 +32,7 @@ This part needs /chezmoi/ and a github *public* repo containing your dotfiles.
 
 #+NAME: chezmoi_init
 #+begin_src sh :tangle script.sh
-echo "I order to continue with setting up your dotfiles"
+echo "In order to continue with setting up your dotfiles"
 echo "you need to have a github public repo containing"
 echo "your dotfiles."
 echo "If you don't, you can continue installing your dotfiles"
@@ -52,4 +52,14 @@ GITHUB_USERNAME=$(gum input --placeholder "your github username")
 DOTFILES_REPO_NAME=$(gum input --placeholder "your dotfiles repo")
 
 chezmoi init --apply --verbose https://github.com/$GITHUB_USERNAME/$DOTFILES_REPO_NAME.git
+#+end_src
+
+* Configure Catppuccin theme for Tmux
+As I only use very few plugins for tmux, I configure it manually.
+
+#+NAME: catppuccin-tmux
+#+begin_src sh :tangle script.sh
+echo "add Catppuccin themes for tmux"
+mkdir -p ~/.tmux/plugins/catppuccin
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
 #+end_src

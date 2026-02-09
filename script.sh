@@ -7,7 +7,7 @@ fi
 
 gum confirm "configure doom ?" && git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs && ~/.config/emacs/bin/doom install
 
-echo "I order to continue with setting up your dotfiles"
+echo "In order to continue with setting up your dotfiles"
 echo "you need to have a github public repo containing"
 echo "your dotfiles."
 echo "If you don't, you can continue installing your dotfiles"
@@ -27,3 +27,7 @@ GITHUB_USERNAME=$(gum input --placeholder "your github username")
 DOTFILES_REPO_NAME=$(gum input --placeholder "your dotfiles repo")
 
 chezmoi init --apply --verbose https://github.com/$GITHUB_USERNAME/$DOTFILES_REPO_NAME.git
+
+echo "add Catppuccin themes for tmux"
+mkdir -p ~/.tmux/plugins/catppuccin
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
