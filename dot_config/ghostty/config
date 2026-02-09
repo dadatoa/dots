@@ -1,0 +1,4 @@
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+command = /opt/homebrew/bin/fish --login --interactive
+background = 282c34
+foreground = ffffff

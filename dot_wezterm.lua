@@ -61,6 +61,11 @@ end)
 -- smart workspace switcher
 local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
 
+-- toggle terminal
+local toggle_terminal = wezterm.plugin.require("https://github.com/zsh-sage/toggle_terminal.wez")
+toggle_terminal.apply_to_config(config)
+
+
 -- This is where you actually apply your config choices
 
 workspace_switcher.apply_to_config(config)
@@ -159,8 +164,12 @@ config.keys = {
       args = { os.getenv("SHELL"), "-c", "$EDITOR $WEZTERM_CONFIG_FILE" },
     }),
   },
-
 }
+-- configuration
+toggle_terminal.apply_to_config(config, {
+	key = ";", -- Key for the toggle action
+	mods = "CTRL", -- Modifier keys for the toggle action
+})
 
 
 

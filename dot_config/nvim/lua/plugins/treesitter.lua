@@ -11,6 +11,9 @@ return {
     'nu',
     'markdown',
     'markdown-inline',
+    },
+  highlight = {
+    enable = true,            -- Enable syntax highlighting
     }
   }
 }

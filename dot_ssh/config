@@ -21,8 +21,8 @@ host xenmgt
   requesttty yes
   remotecommand sesh connect .
 
-host minimgt
-  hostname macmini
+host nixtest
+  hostname nixtest
   user root
   requesttty yes
   remotecommand sesh connect .

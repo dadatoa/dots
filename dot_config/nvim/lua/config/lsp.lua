@@ -15,4 +15,5 @@ vim.lsp.config('lua_ls', {
 -- add more server configs here
 
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('nushell')
 -- enable other configured servers here
