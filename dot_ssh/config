@@ -27,6 +27,12 @@ host nixtest
   requesttty yes
   remotecommand sesh connect .
 
+host minioprt
+  hostname macmini
+  user operateur
+  requesttty yes
+  remotecommand sesh connect .
+
 Host *.local
   preferredauthentications publickey
   identityfile ~/.ssh/lab
