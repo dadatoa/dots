@@ -21,15 +21,9 @@ host xenmgt
   requesttty yes
   remotecommand sesh connect .
 
-host nixtest
-  hostname nixtest
+host nasmgt
+  hostname nas
   user root
-  requesttty yes
-  remotecommand sesh connect .
-
-host minioprt
-  hostname macmini
-  user operateur
   requesttty yes
   remotecommand sesh connect .
 
