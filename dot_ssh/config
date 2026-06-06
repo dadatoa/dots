@@ -10,8 +10,7 @@ Host *
   ServerAliveInterval 240
   preferredauthentications publickey
 
-Host 100.*
-  hostname 100.*
+Host xplode
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
