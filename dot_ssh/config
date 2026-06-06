@@ -10,6 +10,11 @@ Host *
   ServerAliveInterval 240
   preferredauthentications publickey
 
+Host 100.*
+  hostname 100.*
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
+
 Host 10.120.*
   RequestTTY force
   preferredauthentications publickey
