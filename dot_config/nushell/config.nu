@@ -78,3 +78,5 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 source ~/.zoxide.nu
 
 $env.config.show_banner = false
+
+$env.EDITOR = which nvim | get path
