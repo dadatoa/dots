@@ -30,4 +30,4 @@ dotfiles(){
 
 gum confirm "continue with dotfiles?" && dotfiles
 
-gum confirm "add Catppuccin themes for tmux" && mkdir -p ~/.tmux/plugins/catppuccin && git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.tmux/plugins/catppuccin/tmux
+
