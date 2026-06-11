@@ -14,7 +14,7 @@ Host xplode
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
-Host 10.120.*
+Host 10.10.10.*
   RequestTTY force
   preferredauthentications publickey
   identityfile ~/.ssh/lab
