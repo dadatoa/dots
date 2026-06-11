@@ -1,4 +1,0 @@
-# change some default variables
-export EDITOR="nvim"
-
-source ~/.zshrc

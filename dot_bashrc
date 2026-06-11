@@ -1,5 +1,0 @@
-export LANG=fr_FR.UTF-8
-eval "$(starship init bash)"
-eval "$(zoxide init bash)"
-
-
