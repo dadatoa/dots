@@ -33,7 +33,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
-(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 15))
+(setq doom-font (font-spec :family "Lekton Nerd Font Mono" :size 15))
 
 (setq initial-frame-alist '((top . 1) (left . 1) (width . 143) (height . 50)))
 
