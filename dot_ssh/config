@@ -10,7 +10,7 @@ Host *
   ServerAliveInterval 240
   preferredauthentications publickey
 
-Host xplode
+Host xen
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
