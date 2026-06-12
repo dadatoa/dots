@@ -1,8 +1,8 @@
 # Added by OrbStack: 'orb' SSH host for Linux machines
 # This only works if it's at the top of ssh_config (before any Host blocks).
 # This won't be added again if you remove it.
-Include ~/.orbstack/ssh/config
-Include ~/.lima/*/ssh.config
+# Include ~/.orbstack/ssh/config
+# Include ~/.lima/*/ssh.config
 
 AddKeysToAgent yes
 
@@ -15,7 +15,7 @@ Host xplode
   UserKnownHostsFile /dev/null
 
 Host 10.10.10.*
-  RequestTTY force
+  # RequestTTY force
   preferredauthentications publickey
   identityfile ~/.ssh/lab
 
